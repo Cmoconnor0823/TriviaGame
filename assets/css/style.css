@@ -1,0 +1,12 @@
+/*background fails to fill page*/
+
+.mainContainer{
+    background: url("../images/page-background-shell\ -\ 2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+};
+
+#time-remaining{
+    color:white;
+}
