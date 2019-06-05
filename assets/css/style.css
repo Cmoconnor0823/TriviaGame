@@ -4,9 +4,10 @@
     background: url("../images/page-background-shell\ -\ 2.png");
     background-size: cover;
     background-repeat: no-repeat;
+    height:1500px;
+    color:rgb(202, 153, 17);
     
 };
 
-#time-remaining{
-    color:white;
-}
+
+
