@@ -7,6 +7,8 @@ var timeLeftId;
 var quesOpt = ["First year Hogwarts students begin school at age 5.",
     "There are 4 different Houses at Hogwarts."]
 
+var ansOpt = ["True","False"]
+
 //  When the time runs out, run the gameEnd function.
 $("#done").on("click", stop);
 
@@ -50,6 +52,7 @@ function countDown() {
                 //Start the countdown timer
                 countDown();
                 // Looping through the array of questions
+                //Post a true or false button for each question????
             
                 for (var i = 0; i < quesOpt.length; i++) {
             
@@ -64,5 +67,15 @@ function countDown() {
                     a.text(quesOpt[i]);
                     // Adding the button to the HTML
                     $(".questions").append(a);
+                
+                    //this correctly adds a button benith the question but stops posting further questions
+                    for (var i =0; i < ansOpt.length; i++){
+                        var b = $("<button>");
+                        b.addClass("btn btn-outline- btn-lg img-responsive buttonS button");
+                        b.attr("data-name", ansOpt[i]);
+                        b.text(ansOpt[i]);
+                        $(".questions").append(b);
+                    }
                 }
+                
             }
