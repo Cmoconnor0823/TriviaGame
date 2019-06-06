@@ -1,13 +1,43 @@
+// Variable holding Array of questions? question objects
+var quesOpt = [
+
+     {
+        question: "Which of the following is not a house at Hogwarts?",
+        choices:["Ravenclaw","Huffelpuff","Slythern","Wampus"],
+        answer: "Wampus",
+    
+    },
+     {
+        question:"How many balls are used in a game of quidditch?",
+        choices:["3", "4","7","10"],
+        answer: "4",
+    
+    },
+     {
+        question: "",
+        choices: "",
+        answer: "",
+    
+    },
+     {
+        question: "",
+        choices: "",
+        answer: "",
+    
+    },
+
+]
+
+
 //  Set our timer count down interval.
 var secLeft = 30;
 //  Variable that will hold our timeLeft ID when we execute the "run" function
 var timeLeftId;
 
-// Variable holding Array of questions?
-var quesOpt = ["First year Hogwarts students begin school at age 5.",
-    "There are 4 different Houses at Hogwarts."]
 
-var ansOpt = ["True","False"]
+
+
+///turn the questions into objects then print the questions
 
 //  When the time runs out, run the gameEnd function.
 $("#done").on("click", stop);
@@ -61,21 +91,19 @@ function countDown() {
                     var a = $("<div>");
                     // Adding a class
                     a.addClass("quesState");
-                    // Adding a data-attribute with a value of the movie at index i
-                    a.attr("data-name", quesOpt[i]);
                     // Providing the button's text with a value of the movie at index i
-                    a.text(quesOpt[i]);
+                    a.text(quesOpt[i].question);
                     // Adding the button to the HTML
                     $(".questions").append(a);
+                     var b = $("<button>");
+                      b.addClass("btn btn-outline- btn-lg img-responsive buttonS button");
+                      b.text(quesOpt[i].choices);
+                      $(".questions").append(b);
+                    
                 
-                    //this correctly adds a button benith the question but stops posting further questions
-                    for (var i =0; i < ansOpt.length; i++){
-                        var b = $("<button>");
-                        b.addClass("btn btn-outline- btn-lg img-responsive buttonS button");
-                        b.attr("data-name", ansOpt[i]);
-                        b.text(ansOpt[i]);
-                        $(".questions").append(b);
-                    }
                 }
+                //this correctly adds a button benith the question but stops posting further questions
+                //for (var i =0; i < ansOpt.length; i++){
+               // }
                 
             }
