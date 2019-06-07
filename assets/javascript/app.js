@@ -91,15 +91,16 @@ function countDown() {
                     var a = $("<div>");
                     // Adding a class
                     a.addClass("quesState");
-                    // Providing the button's text with a value of the movie at index i
+                    // Providing the question's text with a value of the questions objects  at index i
                     a.text(quesOpt[i].question);
-                    // Adding the button to the HTML
                     $(".questions").append(a);
+                    // Adding the button to the HTML
+                    for (var j = 0; j < quesOpt[i].choices.length; j++){
                      var b = $("<button>");
                       b.addClass("btn btn-outline- btn-lg img-responsive buttonS button");
-                      b.text(quesOpt[i].choices);
+                      b.text(quesOpt[i].choices[j]);
                       $(".questions").append(b);
-                    
+                    }
                 
                 }
                 //this correctly adds a button benith the question but stops posting further questions
