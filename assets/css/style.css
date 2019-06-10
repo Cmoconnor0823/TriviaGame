@@ -1,13 +1,18 @@
-/*background fails to fill page*/
+
 
 .mainContainer{
-    background: url("../images/page-background-shell\ -\ 2.png");
+    background: url("../images/pageBackground2.png");
     background-size: cover;
     background-repeat: no-repeat;
-    height:1500px;
-    color:rgb(202, 153, 17);
+    min-height:900px;
+    color:rgb(240, 179, 12);
     
-};
+}
 
+/*this doesnt change the jumbo tron background why?*/
+ #topBox{
+     background-color: rgb(157, 141, 236);
+     color:rgb(240, 179, 12);
+ };
 
 

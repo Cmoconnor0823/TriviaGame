@@ -8,21 +8,21 @@ var quesOpt = [
     
     },
      {
-        question:"How many balls are used in a game of quidditch?",
-        choices:["3", "4","7","10"],
+        question:"What posistion does Harry play on his Quidditch team?",
+        choices:["Bludger", "Chaser","Seeker","Keeper"],
         answer: "4",
     
     },
      {
-        question: "",
-        choices: "",
-        answer: "",
+        question: "Who is Fluffy?",
+        choices: ["Hermione's Cat", "Harry's Owl", "Hagrid's Dragon", "A Three-Headed Dog"],
+        answer: "A Three Headed Dog",
     
     },
      {
-        question: "",
-        choices: "",
-        answer: "",
+        question: "Before his second year at Hogwarts, How do the Weasley's save Hary from the Dursley's house?",
+        choices: [" A Portkey", "A Flying Car", "An Enchanted Broom", "Floo Powder"],
+        answer: "A Flying Car",
     
     },
 
@@ -97,7 +97,7 @@ function countDown() {
                     // Adding the button to the HTML
                     for (var j = 0; j < quesOpt[i].choices.length; j++){
                      var b = $("<button>");
-                      b.addClass("btn btn-outline- btn-lg img-responsive buttonS button");
+                      b.addClass("btn btn-outline m-2 btn-lg img-responsive buttonS button");
                       b.text(quesOpt[i].choices[j]);
                       $(".questions").append(b);
                     }
