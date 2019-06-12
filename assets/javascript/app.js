@@ -98,15 +98,13 @@ function quesPost() {
         for (var j = 0; j < quesOpt[i].choices.length; j++) {
             var b = $("<button>");
             b.addClass("btn btn-outline m-2 btn-lg img-responsive buttonS button");
-
+//tried adding a id here so I could use that to compare the user answer button click to no avail
             b.text(quesOpt[i].choices[j]);
             $(".questions").append(b);
         }
 
     }
-    //this correctly adds a button benith the question but stops posting further questions
-    //for (var i =0; i < ansOpt.length; i++){
-    // }
+    
 
 }
 
